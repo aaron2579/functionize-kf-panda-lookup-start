@@ -60,4 +60,6 @@ function searchClicked() {
     document.getElementById('main-img').src = 'img/question-mark.png';
     document.getElementById('quote').innerHTML = 'Character Not Found';
   }
+
+  function setName(name, )
 }
