@@ -11,11 +11,7 @@ function searchClicked() {
 
   // Test Input Variable and update the page
   if (name === 'po' || name === 'dragon warrior') {
-    // Update page to Po
-    document.getElementById('character-name').innerHTML = 'Po';
-    document.getElementById('main-img').src = 'img/po.png';
-    document.getElementById('quote').innerHTML =
-      'Buddy, I am the Dragon Warrior.';
+    setCharacter("Po", "po", "Buddy, I am the Dragon Warrior.")
   } else if (name === 'tigress' || name === 'master tigress') {
     // Update page to Tigress
     document.getElementById('character-name').innerHTML = 'Master Tigress';
@@ -60,6 +56,11 @@ function searchClicked() {
     document.getElementById('main-img').src = 'img/question-mark.png';
     document.getElementById('quote').innerHTML = 'Character Not Found';
   }
+}
 
-  function setName(name, )
+function setCharacter(name, imgName, quote) {
+  // Update page to given character information
+  document.getElementById('character-name').innerHTML = name;
+  document.getElementById('main-img').src = `img/${imgName}png`;
+  document.getElementById('quote').innerHTML = quote
 }
